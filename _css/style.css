@@ -12,6 +12,7 @@
 
 html, body{
     height: 100%;
+    overflow: hidden;
 }
 
 .sidebar{
@@ -46,19 +47,53 @@ html, body{
     opacity: 1;
 }
 
-.content {
-    position: absolute;
+section {
     left: 15%;
-    width: 85%;
-    height: 200%;
-    background-color: var(--light-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    scroll-snap-align: center;
+}   
+
+#main {
+    width: 100%;
+    height: 100%;
+    
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+#estacione {
+    background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat
+    center center/cover;
+}
+
+#facil {
+    background: url("https://source.unsplash.com/2aAHlfDOhJM/1600x900") no-repeat
+    center center/cover;
+}
+
+#sem-filas{
+    background: url("https://source.unsplash.com/VRxo0yY-gyM/1600x900") no-repeat
+    center center/cover;
+}
+
+#sem-contato{
+    background: url("https://source.unsplash.com/K2tdx2mFDHc/1600x900") no-repeat
+    center center/cover;
 }
 
 /* EasyPark */
 .easypark {
     position: relative;
 
-    font-family: Reem Kufi;
+    font-family: Reem Kufi, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
