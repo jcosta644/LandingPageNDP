@@ -1,17 +1,18 @@
-const sidebarItems = document.querySelectorAll('.sidebar-item');
+const sideBarItems = document.querySelectorAll('.sidebar-item');
 
-function selectItem() {
+function selectItemClick() {
     removeSelected();
 
     this.classList.add('selected');
 }
 
 function removeSelected() {
-    sidebarItems.forEach(item => {
+    sideBarItems.forEach(item => {
         item.classList.remove('selected');
     })
 }
 
-sidebarItems.forEach(item => {
-    item.addEventListener('click', selectItem);
+
+sideBarItems.forEach(item => {
+    item.addEventListener('click', selectItemClick);
 })
